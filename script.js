@@ -16,11 +16,26 @@ let multiply = (a, b) => a * b;
 let divide = (a, b) => a / b;
 
 // operate function
-const operate = (a, b, operator) => operator(a, b);
-let result = operate(a, b, operator);
+const operate = (a, b, operator) => {
+    switch (operator) {
+        case "+":
+            return add(a, b);
+
+        case "-":
+            return subtract(a, b);
+
+        case "X":
+            return multiply(a, b);
+
+        case "/":
+            return divide(a, b);
+        
+    }
+};
 
 
-// display function
+
+
 const numberBtns = document.querySelectorAll('.number');
 const operatorBtns = document.querySelectorAll('.operator');
 const calDisplay = document.getElementById('display');
@@ -34,7 +49,7 @@ numberBtns.forEach((button) => {
             shouldResetScreen = false;
             calDisplay.textContent += button.textContent;
         } else {
-        calDisplay.textContent += button.textContent;
+            calDisplay.textContent += button.textContent;
         }
     });
 });
