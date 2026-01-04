@@ -39,6 +39,7 @@ const operate = (a, b, operator) => {
 const numberBtns = document.querySelectorAll('.number');
 const operatorBtns = document.querySelectorAll('.operator');
 const calDisplay = document.getElementById('display');
+const equalBtn = document.querySelectorAll('#equal-btn')
 
 // display function
 numberBtns.forEach((button) => {
@@ -62,4 +63,9 @@ operatorBtns.forEach((button) => {
         shouldResetScreen = true;
 
     });
+});
+
+equalBtn.addEventListener('click', () => {
+    b = parseFloat(calDisplay.textContent);
+    calDisplay.textContent = operate(a, b, operator);
 });
