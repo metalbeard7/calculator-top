@@ -1,3 +1,4 @@
+let shouldResetScreen = false;
 let a;
 let b;
 let operator;
