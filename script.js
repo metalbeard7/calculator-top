@@ -25,10 +25,26 @@ const numberBtns = document.querySelectorAll('.number');
 const operatorBtns = document.querySelectorAll('.operator');
 const calDisplay = document.getElementById('display');
 
-
+// display function
 numberBtns.forEach((button) => {
     button.addEventListener('click', () => {
+
+        if (shouldResetScreen === true) {
+            calDisplay.textContent = "";
+            shouldResetScreen = false;
+            calDisplay.textContent += button.textContent;
+        } else {
         calDisplay.textContent += button.textContent;
+        }
     });
 });
 
+// operator button function
+operatorBtns.forEach((button) => {
+    button.addEventListener('click', () => {
+        a = parseFloat(calDisplay.textContent);
+        operator = button.textContent;
+        shouldResetScreen = true;
+
+    });
+});
