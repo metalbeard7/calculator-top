@@ -13,7 +13,7 @@ let subtract = (a, b) => a - b;
 let multiply = (a, b) => a * b;
 
 // divide function
-let divide = (a, b) => a / b;
+let divide = (a, b) => b === 0 ? "Try again!" : a / b;
 
 // operate function
 const operate = (a, b, operator) => {
@@ -67,5 +67,5 @@ operatorBtns.forEach((button) => {
 
 equalBtn.addEventListener('click', () => {
     b = parseFloat(calDisplay.textContent);
-    calDisplay.textContent = operate(a, b, operator);
+    let answer = calDisplay.textContent = operate(a, b, operator);
 });
