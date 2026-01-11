@@ -36,10 +36,10 @@ const operate = (a, b, operator) => {
 
 
 
-const numberBtns = document.querySelectorAll('.number');
-const operatorBtns = document.querySelectorAll('.operator');
+const numberBtns = document.querySelector('.number');
+const operatorBtns = document.querySelector('.operator');
 const calDisplay = document.getElementById('display');
-const equalBtn = document.querySelectorAll('#equal-btn')
+const equalBtn = document.querySelector('#equal-btn')
 
 // display function
 numberBtns.forEach((button) => {
