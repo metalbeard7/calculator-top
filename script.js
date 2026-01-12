@@ -58,7 +58,7 @@ numberBtns.forEach((button) => {
 // operator button function
 operatorBtns.forEach((button) => {
     button.addEventListener('click', () => {
-        if (operator !== "" && a !== undefined) {
+        if (operator !== "" && a !== undefined && shouldResetScreen === false) {
             b = parseFloat(calDisplay.textContent);
             calDisplay.textContent = operate(a, b, operator);
             a = parseFloat(calDisplay.textContent);
