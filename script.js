@@ -58,9 +58,18 @@ numberBtns.forEach((button) => {
 // operator button function
 operatorBtns.forEach((button) => {
     button.addEventListener('click', () => {
-        a = parseFloat(calDisplay.textContent);
-        operator = button.textContent;
-        shouldResetScreen = true;
+        if (operator !== "" && a !== undefined) {
+            b = parseFloat(calDisplay.textContent);
+            calDisplay.textContent = operate(a, b, operator);
+            a = parseFloat(calDisplay.textContent);
+            operator = button.textContent;
+            shouldResetScreen = true;
+        } else {
+            a = parseFloat(calDisplay.textContent);
+            operator = button.textContent;
+            shouldResetScreen = true;
+        }
+    
 
     });
 });
