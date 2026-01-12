@@ -76,5 +76,7 @@ operatorBtns.forEach((button) => {
 
 equalBtn.addEventListener('click', () => {
     b = parseFloat(calDisplay.textContent);
-    let answer = calDisplay.textContent = operate(a, b, operator);
+    calDisplay.textContent = operate(a, b, operator);
+    shouldResetScreen = true;
+    operator = "";
 });
