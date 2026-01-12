@@ -47,6 +47,9 @@ const calDisplay = document.getElementById('display');
 const equalBtn = document.querySelector('#equal-btn');
 const decBtn = document.querySelector('#decimal-btn');
 const clearBtn = document.querySelector('#clear-btn');
+const backBtn = document.querySelector('#back-btn')
+
+
 // display function
 numberBtns.forEach((button) => {
     button.addEventListener('click', () => {
@@ -102,7 +105,15 @@ clearBtn.addEventListener('click', () => {
     calDisplay.textContent = 0;
     a = undefined;
     b = undefined;
-    operater = "";
+    operator = "";
     shouldResetScreen = true;
     
+});
+
+backBtn.addEventListener('click', () => {
+    calDisplay.textContent = calDisplay.textContent.slice(0, -1);
+    if (calDisplay.textContent === "") {
+        calDisplay.textContent = "0";
+        shouldResetScreen = true;
+    };
 });
