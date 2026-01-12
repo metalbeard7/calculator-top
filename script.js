@@ -102,7 +102,7 @@ equalBtn.addEventListener('click', () => {
 });
 
 clearBtn.addEventListener('click', () => {
-    calDisplay.textContent = 0;
+    calDisplay.textContent = "0";
     a = undefined;
     b = undefined;
     operator = "";
