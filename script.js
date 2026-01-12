@@ -41,7 +41,7 @@ const operatorBtns = document.querySelectorAll('.operator');
 const calDisplay = document.getElementById('display');
 const equalBtn = document.querySelector('#equal-btn');
 const decBtn = document.querySelector('#decimal-btn');
-
+const clearBtn = document.querySelector('#clear-btn');
 // display function
 numberBtns.forEach((button) => {
     button.addEventListener('click', () => {
@@ -91,4 +91,13 @@ equalBtn.addEventListener('click', () => {
     calDisplay.textContent = operate(a, b, operator);
     shouldResetScreen = true;
     operator = "";
+});
+
+clearBtn.addEventListener('click', () => {
+    calDisplay.textContent = 0;
+    a = undefined;
+    b = undefined;
+    operater = "";
+    shouldResetScreen = true;
+    
 });
