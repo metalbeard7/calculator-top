@@ -17,23 +17,28 @@ let divide = (a, b) => b === 0 ? "Try again!" : a / b;
 
 // operate function
 const operate = (a, b, operator) => {
+    let result;
     switch (operator) {
         case "+":
-            return add(a, b);
-
+            result = add(a, b);
+                break;
         case "-":
-            return subtract(a, b);
-
+            result = subtract(a, b);
+                break;
         case "X":
-            return multiply(a, b);
-
+            result = multiply(a, b);
+                break;
         case "/":
-            return divide(a, b);
-        
-    }
+            result = divide(a, b);
+                break;
+    };
+    return round(result);
 };
 
-
+function round(num) {  
+    let rounded = Math.round(num * 100000) / 100000;
+    return rounded;
+};
 
 
 const numberBtns = document.querySelectorAll('.number');
