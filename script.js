@@ -12,8 +12,6 @@ const keyMap ={
     'Backspace': 'back-btn',
     'Enter': 'equal-btn',
     '.': 'decimal-btn',
-    '()': 'para-btn',
-    '%': 'perc-btn',
     'c': 'clear-btn',
 };
 
