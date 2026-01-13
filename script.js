@@ -61,7 +61,8 @@ const calDisplay = document.getElementById('display');
 const equalBtn = document.querySelector('#equal-btn');
 const decBtn = document.querySelector('#decimal-btn');
 const clearBtn = document.querySelector('#clear-btn');
-const backBtn = document.querySelector('#back-btn')
+const backBtn = document.querySelector('#back-btn');
+const calcCont = document.querySelector('#calculator-container');
 
 // Set screen to display 0 at startup
 calDisplay.textContent = "0";
