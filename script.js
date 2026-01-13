@@ -3,6 +3,20 @@ let a;
 let b;
 let operator;
 
+
+const keyMap ={
+    '+': 'add-btn',
+    '-': 'sub-btn',
+    '*': 'mult-btn',
+    '/': 'div-btn',
+    'Backspace': 'back-btn',
+    'Enter': 'equal-btn',
+    '.': 'decimal-btn',
+    '()': 'para-btn',
+    '%': 'perc-btn',
+    'c': 'clear-btn',
+};
+
 // add function
 let add = (a, b) => a + b;
 
@@ -116,4 +130,21 @@ backBtn.addEventListener('click', () => {
         calDisplay.textContent = "0";
         shouldResetScreen = true;
     };
+});
+
+// Keyboard functionality
+document.addEventListener('keydown', (e) => {
+    let buttonId;
+
+    if (keyMap[e.key]) {
+        buttonId = `#${keyMap[e.key]}`;
+    } else {
+        buttonId = `#btn-${e.key}`;
+    }
+    const element = document.querySelector(buttonId);
+
+    if (!!element) {
+        element.click();
+    }
+ 
 });
