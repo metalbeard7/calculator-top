@@ -1,4 +1,4 @@
-let shouldResetScreen = false;
+let shouldResetScreen = true;
 let a;
 let b;
 let operator;
@@ -63,6 +63,8 @@ const decBtn = document.querySelector('#decimal-btn');
 const clearBtn = document.querySelector('#clear-btn');
 const backBtn = document.querySelector('#back-btn')
 
+// Set screen to display 0 at startup
+calDisplay.textContent = "0";
 
 // display function
 numberBtns.forEach((button) => {
