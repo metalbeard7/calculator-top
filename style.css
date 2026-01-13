@@ -25,12 +25,16 @@ body{
 }
 
 #display {
-    width: 100%;
+    width: 90%;
     height: auto;
+    justify-self: center;
     font-size: 32px;
     background-color: #4C7B89;
+    border-radius: 8px;
+    margin-top: 16px;
     padding: 8px;
     color: #333;
+    text-align: right;
 }
 
 #num-pad {
@@ -83,4 +87,14 @@ button {
 #equal-btn {
     flex-grow: 1;
     
+}
+
+.cal-btn {
+    transition: transform 0.3s ease-in-out;
+}
+
+.cal-btn:hover:hover {
+   transform: scale(1.1);
+   background-color: #4C7B89;
+   color: #333;
 }
