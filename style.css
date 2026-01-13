@@ -51,6 +51,8 @@ button {
     color: #89794C;
     font-size: 28px;
     margin-bottom: 4px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 #row-1 {
@@ -76,4 +78,9 @@ button {
 #row-5 {
     display: flex;
     justify-content: space-around;
+}
+
+#equal-btn {
+    flex-grow: 1;
+    
 }
